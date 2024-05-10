@@ -250,6 +250,14 @@ if (document.referrer && new URL(document.referrer).origin == location.origin) {
   });
 }
 
+const benchAnchor = document.getElementById("anchor-benchmark");
+benchAnchor.href = location.origin + "/benchmark";
+benchAnchor.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log('we made it?')
+  modal.show()
+});
+
 fetchResultsCount().then((resultsCount) => {
   const resultsCountHeader = document.getElementById("header-results-count");
   resultsCountHeader.textContent = `Found ${resultsCount} matching climbs`;

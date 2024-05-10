@@ -1,4 +1,5 @@
 var alert = document.querySelector('.alert')
+var modal = new bootstrap.Modal(document.getElementById('main-modal'))
 
 function drawBoard(
   svgElementId,
